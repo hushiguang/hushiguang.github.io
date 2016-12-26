@@ -1,0 +1,146 @@
+<h1 id="Maupassant"><a href="#Maupassant" class="headerlink" title="Maupassant"></a>Maupassant</h1><p><a href="https://travis-ci.org/tufu9441/maupassant-hexo"><img src="https://travis-ci.org/tufu9441/maupassant-hexo.svg?branch=master" alt="Build Status"></a>   <a href="https://github.com/tufu9441/maupassant-hexo/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a></p>
+<blockquote>
+<p>大道至简</p>
+</blockquote>
+<p><a href="https://www.haomwei.com">Preview</a>｜<a href="https://www.haomwei.com/technology/maupassant-hexo.html">中文文档</a></p>
+<p>A simple Hexo template with great performance on different devices, ported from a Typecho theme by <a href="https://github.com/pagecho/maupassant/">Cho</a>, forked and modified from <a href="https://github.com/icylogic/maupassant-hexo/">icylogic</a>.</p>
+<p><img src="http://ooo.0o0.ooo/2015/10/24/562b5be12177e.jpg" alt="template preview" title="Maupassant template preview"></p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Install theme and renderers:</p>
+<pre><code class="shell">$ git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant
+$ npm install hexo-renderer-jade --save
+$ npm install hexo-renderer-sass --save
+</code></pre>
+<p>Then change your <code>theme</code> setting in <code>_config.yml</code> to <code>maupassant</code>.</p>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>Default config:</p>
+<pre><code class="YAML"><span class="attr">fancybox:</span> <span class="literal">true</span> <span class="comment">## If you want to use fancybox please set the value to true.</span>
+<span class="attr">duoshuo:</span> <span class="comment">## Your duoshuo_shortname, e.g. username</span>
+<span class="attr">disqus:</span> <span class="comment">## Your disqus_shortname, e.g. username</span>
+<span class="attr">google_search:</span> <span class="literal">true</span> <span class="comment">## Use Google search, true/false.</span>
+<span class="attr">baidu_search:</span> <span class="comment">## Use Baidu search, true/false.</span>
+<span class="attr">swiftype:</span> <span class="comment">## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT</span>
+<span class="attr">tinysou:</span> <span class="comment">## Your tinysou_key, e.g. 4ac092ad8d749fdc6293</span>
+<span class="attr">self_search:</span> <span class="comment">## Use a jQuery-based local search engine, true/false.</span>
+<span class="attr">google_analytics:</span> <span class="comment">## Your Google Analytics tracking id, e.g. UA-42425684-2</span>
+<span class="attr">baidu_analytics:</span> <span class="comment">## Your Baidu Analytics tracking id, e.g. 8006843039519956000</span>
+<span class="attr">show_category_count:</span> <span class="literal">false</span> <span class="comment">## If you want to show the count of categories in the sidebar widget please set the value to true.</span>
+<span class="attr">shareto:</span> <span class="literal">true</span> <span class="comment">## If you want to use the share button please set the value to true.</span>
+<span class="attr">busuanzi:</span> <span class="literal">true</span> <span class="comment">## If you want to use Busuanzi page views please set the value to true.</span>
+<span class="attr">widgets_on_small_screens:</span> <span class="literal">false</span> <span class="comment">## Set to true to enable widgets on small screens.</span>
+
+<span class="attr">menu:</span>
+<span class="attr">  - page:</span> home
+<span class="attr">    directory:</span> .
+<span class="attr">    icon:</span> fa-home
+<span class="attr">  - page:</span> archive
+<span class="attr">    directory:</span> archives/
+<span class="attr">    icon:</span> fa-archive
+<span class="attr">  - page:</span> about
+<span class="attr">    directory:</span> about/
+<span class="attr">    icon:</span> fa-user
+<span class="attr">  - page:</span> rss
+<span class="attr">    directory:</span> atom.xml
+<span class="attr">    icon:</span> fa-rss
+
+<span class="attr">widgets:</span> <span class="comment">## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.</span>
+<span class="bullet">  -</span> search
+<span class="bullet">  -</span> category
+<span class="bullet">  -</span> tag
+<span class="bullet">  -</span> recent_posts
+<span class="bullet">  -</span> recent_comments
+<span class="bullet">  -</span> links
+
+<span class="attr">links:</span>
+<span class="attr">  - title:</span> site-name1
+<span class="attr">    url:</span> http://www.example1.com/
+<span class="attr">  - title:</span> site-name2
+<span class="attr">    url:</span> http://www.example2.com/
+<span class="attr">  - title:</span> site-name3
+<span class="attr">    url:</span> http://www.example3.com/
+
+<span class="attr">timeline:</span>
+<span class="attr">  - num:</span> <span class="number">1</span>
+<span class="attr">    word:</span> <span class="number">2014</span>/<span class="number">06</span>/<span class="number">12</span>-Start
+<span class="attr">  - num:</span> <span class="number">2</span>
+<span class="attr">    word:</span> <span class="number">2014</span>/<span class="number">11</span>/<span class="number">29</span>-XXX
+<span class="attr">  - num:</span> <span class="number">3</span>
+<span class="attr">    word:</span> <span class="number">2015</span>/<span class="number">02</span>/<span class="number">18</span>-DDD
+<span class="attr">  - num:</span> <span class="number">4</span>
+<span class="attr">    word:</span> More
+
+<span class="comment"># Static files</span>
+<span class="attr">js:</span> js
+<span class="attr">css:</span> css
+
+<span class="comment"># Theme version</span>
+<span class="attr">version:</span> <span class="number">0.0</span><span class="number">.0</span>
+</code></pre>
+<ul>
+<li>fancybox - Enable <a href="http://fancyapps.com/fancybox/">Fancybox</a></li>
+<li>duoshuo - <a href="http://duoshuo.com">Duoshuo</a> shortname</li>
+<li>disqus - <a href="https://disqus.com">Disqus</a> shortname</li>
+<li>google_search - Default search engine</li>
+<li>baidu_search - Search engine for users in China</li>
+<li>swiftype - <a href="https://swiftype.com">Swiftype Search</a> key</li>
+<li>tinysou - <a href="http://tinysou.com">Tiny Search</a> key</li>
+<li>self_search - A jQuery-based <a href="http://hahack.com/codes/local-search-engine-for-hexo">local search engine</a>, with the dependency on the plugin <a href="https://github.com/PaicHyperionDev/hexo-generator-search">hexo-generator-search</a>.</li>
+<li>google_analytics - <a href="https://www.google.com/analytics/">Google Analytics</a> tracking id</li>
+<li>baidu_analytics - <a href="http://tongji.baidu.com">Baidu Analytics</a> tracking id</li>
+<li>show_category_count - Show the count of categories in the sidebar widget.</li>
+<li>shareto - Enable share button</li>
+<li>busuanzi - Enable <a href="http://busuanzi.ibruce.info">Busuanzi</a> page views</li>
+<li>widgets_on_small_screens - Show the widgets at the bottom of small screens.</li>
+<li>menu - Customize your menu of pages here, just follow the format of existied items. Don’t forget to create corresponding folders inlcuding <code>index.md</code> in <code>source</code> folder to ensure the pages will correctly display. <a href="http://fontawesome.io">FontAwesome</a> icon fonts have been integrated, and you can choose other icons which you like <a href="http://fontawesome.io/icons/">here</a> and use them according to the instruction.</li>
+<li>widgets - Choose and arrange the widgets in sidebar here.</li>
+<li>links - Edit your blogroll here.</li>
+<li>timeline - Show a timeline of the website by setting <code>layout: timeline</code> of a page.</li>
+<li>Static files - Static files directory, for convenience of CDN usage.</li>
+<li>Theme version - For automatic refresh of static files on CDN.</li>
+</ul>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><h4 id="Logo"><a href="#Logo" class="headerlink" title="Logo"></a>Logo</h4><p>You can set a <strong>favicon.ico</strong> for your website, please put it into  <code>source</code> folder of hexo directory, recommended size: 32px*32px.</p>
+<p>You can add a website logo for apple devices, please put an image named <strong>apple-touch-icon.png</strong> into <code>source</code> folder of hexo directory, recommended size: 114px*114px.</p>
+<h4 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h4><p>You can control the abstract of a post shown at index, by either filling a <code>description:</code> item in <code>front-matter</code> of the <code>post.md</code>, or just inserting a <code>&lt;!--more--&gt;</code> before your hidden content.</p>
+<h4 id="Page"><a href="#Page" class="headerlink" title="Page"></a>Page</h4><p>Create folders inlcuding <code>index.md</code> in <code>source</code> folder to add pages, and add a <code>layout: page</code> in <code>front-matter</code> of <code>index.md</code>. If you need a single column page without sidebar, just set <code>layout: single-column</code> instead of <code>layout: page</code>.</p>
+<h4 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h4><p>TOC in a post can be enabled by adding a <code>toc: true</code> item in <code>front-matter</code>.</p>
+<h4 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h4><p>Comment feature of each post and page can be enabled (default) and disabled by adding a <code>comments: true</code> or a <code>comments: false</code> in <code>front-matter</code>. This could be useful when you want comment feature for a guestbook page, but don’t want comment feature for a about page.</p>
+<h4 id="Syntax-Highlighting"><a href="#Syntax-Highlighting" class="headerlink" title="Syntax Highlighting"></a>Syntax Highlighting</h4><p>Highlighted code showcase is supported, please set the <code>highlight</code> option in <code>_config.yml</code> of hexo directory like this:</p>
+<pre><code class="YAML"><span class="attr">highlight:</span>
+<span class="attr">  enable:</span> <span class="literal">true</span>
+<span class="attr">  auto_detect:</span> <span class="literal">true</span>
+<span class="attr">  line_number:</span> <span class="literal">true</span>
+<span class="attr">  tab_replace:</span>
+</code></pre>
+<h4 id="Math-Equation"><a href="#Math-Equation" class="headerlink" title="Math Equation"></a>Math Equation</h4><p>Add</p>
+<pre><code class="YAML"><span class="attr">mathjax:</span> <span class="literal">true</span>
+</code></pre>
+<p>in Hexo’s <code>_config.yml</code>.</p>
+<p>In the post which you would like to use math equation, add <code>mathjax: true</code> in the <code>front-matter</code>. For example:</p>
+<pre><code class="YAML"><span class="attr">title:</span> Test Math
+<span class="attr">date:</span> <span class="number">2016</span><span class="bullet">-04</span><span class="bullet">-05</span> <span class="number">14</span>:<span class="number">16</span>:<span class="number">00</span>
+<span class="attr">categories:</span> math
+<span class="attr">mathjax:</span> <span class="literal">true</span>
+<span class="meta">---</span>
+</code></pre>
+<p>The default math delimiters are <code>$$...$$</code> and <code>\\[...\\]</code> for displayed mathematics,<br>and <code>$...$</code> and <code>\\(...\\)</code> for in-line mathematics.</p>
+<p>However, if your post contains dollar signs (<code>$</code>), and they appear often in non-mathematical parts, in other words, you want to use <code>$</code> as dollar sign not inline math delimiter, please add</p>
+<pre><code class="YAML"><span class="attr">mathjax2:</span> <span class="literal">true</span>
+</code></pre>
+<p>in Hexo’s <code>_config.yml</code> instead of <code>mathjax: true</code>. Correspondingly, add <code>mathjax2: true</code> to the <code>front-matter</code> of the post in which<br>you would like to use math equation.</p>
+<p>See the <a href="http://zhongpu.info/2016/05/06/Mathjax%20and%20Hexo/">example</a>.</p>
+<h4 id="Languages"><a href="#Languages" class="headerlink" title="Languages"></a>Languages</h4><p>Seven languages are available for this theme currently: Simplified Chinese (zh-CN), Traditional Chinese (zh-TW), English (en), French (fr-FR), German (de-DE), Korean (ko) and Spanish (es-ES). Contributions of translating to other languages will be highly appreciated.</p>
+<h2 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h2><ul>
+<li><p>Check whether your Terminal’s current directory is in hexo’s root directory which contains <code>source/</code>, <code>themes/</code>, etc.</p>
+</li>
+<li><p>If you have any trouble in using this theme, please feel free to open an <a href="https://github.com/tufu9441/maupassant-hexo/issues">issue</a>.</p>
+</li>
+</ul>
+<h2 id="Browser-Support"><a href="#Browser-Support" class="headerlink" title="Browser Support"></a>Browser Support</h2><p><img src="http://i.imgur.com/iO9L5ty.png" alt="Imgur"></p>
+<h2 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h2><p>All kinds of contributions (enhancements, new features, documentation &amp; code improvements, issues &amp; bugs reporting) are welcome.</p>
+<p>Looking forward to your pull request.</p>
+<h2 id="Acknowledgements"><a href="#Acknowledgements" class="headerlink" title="Acknowledgements"></a>Acknowledgements</h2><p>Thank <a href="http://blog.jamespan.me">JamesPan</a> for his help to improve this theme<br>.</p>
+<h2 id="Maupassant-on-other-platforms"><a href="#Maupassant-on-other-platforms" class="headerlink" title="Maupassant on other platforms:"></a>Maupassant on other platforms:</h2><ul>
+<li>Typecho：<a href="https://github.com/pagecho/maupassant/">https://github.com/pagecho/maupassant/</a></li>
+<li>Octopress：<a href="https://github.com/pagecho/mewpassant/">https://github.com/pagecho/mewpassant/</a></li>
+<li>Farbox：<a href="https://github.com/pagecho/Maupassant-farbox/">https://github.com/pagecho/Maupassant-farbox/</a></li>
+<li>Wordpress：<a href="https://github.com/iMuFeng/maupassant/">https://github.com/iMuFeng/maupassant/</a></li>
+<li>Ghost: <a href="https://github.com/LjxPrime/maupassant/">https://github.com/LjxPrime/maupassant/</a></li>
+</ul>
